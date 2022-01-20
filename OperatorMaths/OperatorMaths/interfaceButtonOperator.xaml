@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OperatorMaths.interfaceButtonOperator">
+    <ContentPage.Content>
+        <StackLayout>
+            <ScrollView>
+                <StackLayout>
+                    <Grid  Padding="20">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="100" />
+                            <RowDefinition Height="100" />
+                            <RowDefinition Height="100" />
+                            <RowDefinition Height="100" />
+                            <RowDefinition Height="100" />
+                            <RowDefinition Height="100" />
+                            <RowDefinition Height="100" />
+                            <RowDefinition Height="100" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        
+                        <Button Clicked="btnOperatorCalcul" BorderColor="LightGray" BorderWidth="1.5" ClassId="addition (+)"
+                                CornerRadius="5" BackgroundColor="Wheat" Text="+" AutomationId="+"  FontSize="50" TextColor="White" FontAttributes="Bold"/>
+
+                        <Button Clicked="btnOperatorCalcul" BorderColor="LightGray" BorderWidth="1.5" Grid.Column="1"  ClassId="substraction (-)"
+                                CornerRadius="5" BackgroundColor="LightGreen" Text="-" AutomationId="-" FontSize="60" TextColor="White" FontAttributes="Bold"/>
+
+                        <Button Clicked="btnOperatorCalcul" BorderColor="LightGray" BorderWidth="1.5" Grid.Column="2" ClassId="multiplication (x)"
+                                Grid.RowSpan="2" CornerRadius="5" BackgroundColor="Black" Text="x" AutomationId="x" FontSize="60" TextColor="white" FontAttributes="Bold"/>
+
+                        <Button Clicked="btnOperatorCalcul" BorderColor="LightGray" BorderWidth="1.5" ClassId="division (/)"
+                                Grid.Row="1" Grid.ColumnSpan="2"  CornerRadius="5" BackgroundColor="Orange" 
+                                Text="/" AutomationId="/" FontSize="60" TextColor="white" FontAttributes="Bold"/>
+
+                        <Button Clicked="btnOperatorCalcul" BorderColor="LightGray" BorderWidth="1.5" Grid.Row="2" CornerRadius="5" ClassId="Powerful 2 (x²)"
+                                BackgroundColor="LightBlue" Text="x²" AutomationId="x²" FontSize="60" 
+                                TextColor="white" FontAttributes="Bold"/>
+
+
+                        <Button Clicked="btnOperatorCalcul" BorderColor="LightGray" BorderWidth="1.5" Grid.Row="3" CornerRadius="5"  ClassId="Powerful N (x^(n))"
+                                BackgroundColor="LavenderBlush" Text="x^(n)" AutomationId="x^(n)" FontSize="30" 
+                                TextColor="Black" FontAttributes="Bold"/>
+
+                        <Button Clicked="btnOperatorCalcul" BorderColor="LightGray" BorderWidth="1.5" Grid.Row="2" Grid.Column="1" ClassId="percentage (%)"
+                                CornerRadius="5" BackgroundColor="Gold" 
+                                Text="%" AutomationId="%" FontSize="60" TextColor="white" FontAttributes="Bold"/>
+
+                        <Button Clicked="btnOperatorCalcul" BorderColor="LightGray" BorderWidth="1.5" Grid.Row="2" Grid.Column="2" ClassId="square root (√)"
+                                CornerRadius="5" BackgroundColor="DarkKhaki" 
+                                 Text="√" AutomationId="√" FontSize="60" TextColor="white" FontAttributes="Bold" />
+
+                        <Button Clicked="btnOperatorCalcul" BorderColor="LightGray" BorderWidth="1.5" Grid.Row="3" Grid.Column="1" ClassId="function has a stranger   (ax +b)"
+                                CornerRadius="5" BackgroundColor="Teal" 
+                                Text="f(x)" AutomationId="f(x)" TextTransform="Lowercase" FontSize="40" TextColor="white" FontAttributes="Bold" />
+
+                        <Button Clicked="btnOperatorCalcul" BorderColor="LightGray" BorderWidth="1.5" Grid.Row="3" Grid.Column="2" CornerRadius="5" ClassId="equality (=)"
+                                BackgroundColor="Red" 
+                                Text="=" AutomationId="=" FontSize="40" TextColor="white" FontAttributes="Bold"/>
+
+                        <Button Clicked="btnOperatorCalcul" BorderColor="LightGray" BorderWidth="1.5" Grid.Row="4" Grid.ColumnSpan="3" CornerRadius="5" ClassId="function has two unknown (ax² +bx +c)"
+                                BackgroundColor="Olive" 
+                                Text="ax²+bx+c" AutomationId="ax²+bx+c" TextTransform="Lowercase" FontSize="40" TextColor="white" FontAttributes="Bold"/>
+
+                        <Button Clicked="btnOperatorCalcul" BorderColor="LightGray" BorderWidth="1.5" Grid.Row="5" Grid.Column="0" CornerRadius="5" ClassId="exponential (exp(x))"
+                                BackgroundColor="Wheat" AutomationId="exp(x)" FontSize="30" Text="exp (x)" TextColor="Black" FontAttributes="Bold"/>
+
+                        <Button Clicked="btnOperatorCalcul" BorderColor="LightGray" BorderWidth="1.5" Grid.Row="5" Grid.Column="1" CornerRadius="5" ClassId="logarithm (log(x))"
+                                BackgroundColor="LightPink" AutomationId="log(x)" FontSize="30" Text="log (x)" TextColor="White" FontAttributes="Bold"/>
+
+                        <ImageButton Source="decimalToHexa.png" Clicked="imageBtnOperatorCalcul" Grid.Row="5" BorderColor="LightGray" BorderWidth="1.5" ClassId="conversion Decimal to hexadecimal"
+                                     Grid.Column="2" CornerRadius="5" BackgroundColor="LightGreen" AutomationId="d>h"  />
+
+                        <ImageButton Source="decimalToBinaire.png"  Clicked="imageBtnOperatorCalcul" Grid.Row="6" BorderColor="LightGray" BorderWidth="1.5" Grid.Column="0"  
+                                     ClassId="conversion decimal to binary"
+                                     CornerRadius="5" BackgroundColor="LightGreen" AutomationId="d>b"/>
+                        
+                        <ImageButton Source="hexatobinaire.png" Clicked="imageBtnOperatorCalcul" Grid.Row="6" BorderColor="LightGray" BorderWidth="1.5" Grid.Column="1" 
+                                      ClassId="Conversion hexadecimal to binary" CornerRadius="5" BackgroundColor="LightGreen"  AutomationId="h>b" />
+                        
+                        <ImageButton Source="hexatodecimal.png" Clicked="imageBtnOperatorCalcul" Grid.Row="6" BorderColor="LightGray" BorderWidth="1.5" Grid.Column="2" CornerRadius="5" BackgroundColor="LightGreen" 
+                                      ClassId="Conversion hexadecimal to decimal" AutomationId="h>d" />
+                        
+                        <ImageButton Source="binairetodecimal.png" Clicked="imageBtnOperatorCalcul" Grid.Row="7" BorderColor="LightGray" BorderWidth="1.5" Grid.Column="0" CornerRadius="5" BackgroundColor="LightGreen" 
+                                 ClassId="Conversion binary to decimal" AutomationId="b>d"/>
+                        
+                        <ImageButton Source="binairetohexa.png" Clicked="imageBtnOperatorCalcul" Grid.Row="7" BorderColor="LightGray" BorderWidth="1.5" Grid.Column="1" CornerRadius="5" BackgroundColor="LightGreen" 
+                                  ClassId="Conversion binary to hexadecimal" AutomationId="b>h" />
+                        
+                    </Grid>
+                </StackLayout>
+            </ScrollView>
+            <Label Text="@kigames" TextColor="Black" HorizontalOptions="Center" />
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
